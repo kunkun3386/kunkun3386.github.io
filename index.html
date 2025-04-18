@@ -1,68 +1,197 @@
-
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta name="360-analysis-id" content="1k1c1k1e39331c2v" />
-  <meta charset="utf-8" />
-  <!--!‫‭‬‫‬‪‫‭‬‫‬‬‭‫‭‭‪‭‫‬‪‬‏‫--> 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
-  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,user-scalable=no" /> 
-  <link rel="shortcut icon" type="image/x-icon" href="https://s1.imagehub.cc/images/2025/03/03/636f2a6da36a1f0d8f7731ed5d5faf04.th.jpg" /> 
-  <title>饭太硬 | 导航</title> 
-  <meta name="description" content="饭太硬的自留地" /> 
-  <meta name="keywords" content="饭太硬" /> 
-  <link rel="stylesheet" type="text/css" href="z/css/h.9c69ed6c.css" /> 
-  <link rel="stylesheet" type="text/css" href="z/css/nekotora.99cf6f8c.css" /> 
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-137340638-1"></script>
-  <!--!‫‭‬‫‬‪‫‭‬‫‬‬‭‫‭‭‪‭‫‬‪‬‏‫--> 
-  <script>function a() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], a("js", new Date), a("config", "UA-137340638-1");</script>  
-  <meta charset="utf-8&quot;/" /> 
-  <style>
-          mark {
-              background-color:#CCCCCC; font-weight:bold;
-          }
-      </style> 
-  <style>
-    .toast-bottom-center {
-        position: absolute;
-        left: 30px;
-        right: 10px;
-        top: 20px;
-    }
-</style>
-  <!--!‫‭‬‫‬‪‫‭‬‫‬‬‭‫‭‭‪‭‫‬‪‬‏‫-->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3NF90DWZG8"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未来之翼 | 个人网站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-  gtag('config', 'G-3NF90DWZG8');
-</script>
- </head> 
- <!-- Google tag (gtag.js) -->   
- <body>
-  <div class="background"> 
-   <canvas id="startrack"></canvas> 
-   <div class="cover"></div> 
-  </div> 
-  <div class="main"> 
-   <div class="ch intro"> 
-    <div class="container"> 
-     <div class="hello"> 
-      <h1 id="slogan">Hi~</h1> 
-      <!--随机文字信息在\js\page.3a0791a3.js中修改--> 
-      <h2> 
-       <div class="circle"> 
-        <span></span> 
-        <span></span> 
-        <span></span> 
-       </div> 饭 </h2> 
-     </div> 
-    </div> 
-   </div> 
-   <div class="find ch"> 
-    <div class="container links"> 
+        :root {
+            --primary-color: #2A2A72;
+            --secondary-color: #009FFD;
+            --accent-color: #FF0076;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.3s;
+        }
+
+        .cta-button {
+            padding: 15px 40px;
+            background: var(--accent-color);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 118, 0.3);
+        }
+
+        .section {
+            padding: 100px 20px;
+            min-height: 100vh;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#about">关于</a>
+            <a href="#skills">技能</a>
+            <a href="#contact">联系</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>未来之翼</h1>
+            <p>探索数字世界的无限可能</p>
+            <button class="cta-button">开始旅程</button>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>关于我</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3><i class="fas fa-rocket"></i> 创新设计</h3>
+                <p>将创意转化为直观的数字体验</p>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-code"></i> 前沿技术</h3>
+                <p>掌握最新Web开发技术栈</p>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-chart-line"></i> 持续成长</h3>
+                <p>永不停歇的学习与进步</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 添加滚动动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.skill-card').forEach((card) => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>    <div class="container links"> 
      <h2 class="chtitle">空壳 <span>接口（点击复制）</span></h2> 
      <div class="clear col-3"> 
       <div class="item"> 
